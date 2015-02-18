@@ -5,6 +5,6 @@ module Good
 )
 where
 
-data Kind = Electronics | Book deriving (Show, Eq)
+data Kind = Electronics | Food | Book | Medicine deriving (Show, Eq)
 
 data Good = Good {price :: Double, kind :: Kind, imported :: Bool} deriving (Show)

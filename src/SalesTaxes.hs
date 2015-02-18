@@ -11,7 +11,7 @@ imported_tax = 0.05
 
 priceFor :: Good -> Double
 priceFor g@(Good {price = p, kind = k})
-  | k `elem` [Book]  = price g
+  | k `elem` [Food,Book,Medicine]  = price g
   | otherwise        =  calc_basic_tax g
 
 calc_basic_tax :: Good -> Double
