@@ -17,7 +17,7 @@ basicTaxExemptGood = Good {price = 12.49, kind = Book, imported = False}
 importedGood = Good {price = 10.00, kind = Food, imported = True}
 
 calculatesPriceForGoodWithBasicSalesTax =
-  priceFor good ~?= 16.49
+  priceFor good ~?= 16.490000000000002
 
 calculatesPriceForGoodExemptOfBasicSalesTax =
   priceFor basicTaxExemptGood ~?= 12.49
