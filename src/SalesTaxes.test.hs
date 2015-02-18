@@ -10,7 +10,7 @@ tests = TestList [
   calculatesPriceForGoodWithBasicSalesTax
   ]
 
-good = Good {price = 14.99, imported = False}
+good = Good {price = 14.99, kind = Electronics, imported = False}
 
 calculatesPriceForGoodWithBasicSalesTax =
   priceFor good ~?= 16.49

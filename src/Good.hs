@@ -1,7 +1,10 @@
 module Good
 (
-  Good(..)
+  Good(..),
+  Kind(..)
 )
 where
 
-data Good = Good {price :: Double, imported :: Bool} deriving (Show)
+data Kind = Electronics deriving (Show, Eq)
+
+data Good = Good {price :: Double, kind :: Kind, imported :: Bool} deriving (Show)
