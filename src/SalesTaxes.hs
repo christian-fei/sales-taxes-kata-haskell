@@ -7,10 +7,16 @@ where
 import Good
 
 basic_sales_tax = 0.1
+imported_tax = 0.05
 
 priceFor :: Good -> Double
-priceFor g@(Good {price = p}) = calc_basic_sales_tax g
+priceFor g@(Good {price = p, imported = True}) = calc_basic_tax g + calc_imported_tax g
+priceFor g@(Good {price = p}) = calc_basic_tax g
 
-calc_basic_sales_tax :: Good -> Double
-calc_basic_sales_tax (Good {price = p}) =
+calc_basic_tax :: Good -> Double
+calc_basic_tax (Good {price = p}) =
   fromIntegral (round (100 *((fromIntegral $ round (p * basic_sales_tax * 20)) / 20 + p))) / 100
+
+calc_imported_tax :: Good -> Double
+calc_imported_tax (Good {price = p}) =
+  fromIntegral (round (100 *((fromIntegral $ round (p * imported_tax * 20)) / 20 + p))) / 100

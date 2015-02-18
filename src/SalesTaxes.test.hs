@@ -11,6 +11,7 @@ tests = TestList [
   ]
 
 good = Good {price = 14.99, kind = Electronics, imported = False}
+imported_good = Good {price = 14.99, kind = Electronics, imported = True}
 
 calculatesPriceForGoodWithBasicSalesTax =
   priceFor good ~?= 16.49
