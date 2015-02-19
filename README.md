@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/christian-fei/sales-taxes-kata-haskell.svg?style=svg)](https://circleci.com/gh/christian-fei/sales-taxes-kata-haskell)
+
 This problem requires some kind of input. You are free to implement any mechanism for feeding input into your solution (for example, using hard coded data within a unit test). You should provide sufficient evidence that your solution is complete by, as a minimum, indicating that it works correctly against the supplied test data.
 
 PROBLEM: SALES TAXES
