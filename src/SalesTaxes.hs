@@ -22,4 +22,4 @@ calc_basic_tax (Good {price = p}) = calc_tax p basic_sales_tax
 
 calc_imported_tax :: Good -> Double
 calc_imported_tax (Good {price = p, imported = True}) = calc_tax p imported_tax
-calc_imported_tax (Good {price = p, imported = False}) = 0
+calc_imported_tax (Good {price = _, imported = _}) = 0
